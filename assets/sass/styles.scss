@@ -1,0 +1,237 @@
+$background-color: rgba(236, 236, 236, 0);
+$preheader-color: rgb(14, 126, 253);
+$header-background: #0000;
+$article-color: rgb(54, 54, 54);
+$main-background: rgba(201, 201, 201, 0);
+
+$nav-color: #3269d6;
+$nav-font-color: rgb(235, 235, 235);
+
+$main-font: 'Barlow', sans-serif;
+$white-font: aliceblue;
+$normal-font-size: 1em;
+
+$hover: #273d68;
+
+$transition: .1s all ease-in;
+
+
+
+@mixin flexbox-ac-jc { // AC= align-items = center, JC = justify-content: center
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin a-element-style-with-transition {
+    
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+            color: $hover;
+            transition: $transition;
+        }
+    }
+}
+
+// * {
+//     border: .5px black solid;
+// }
+
+
+body {
+    background: $background-color;
+    max-width: 100vw;
+    font-family: $main-font;
+
+    overflow-x: hidden !important;
+    
+    margin: 0;
+    padding: 0;
+
+    @include flexbox-ac-jc;
+}
+
+.container {
+    @include flexbox-ac-jc;
+    flex-direction: column;
+    
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+}
+
+.preheader {
+    
+    background: $preheader-color;
+    width: 100vw;
+    min-height: 4vh;
+    
+
+    
+    @include flexbox-ac-jc;
+    justify-content: flex-start;
+    
+    ul {
+        display: flex;
+        flex-direction: row; 
+        gap: 3rem;
+        padding: 0;
+        margin: .5em;
+        align-self: flex-start;
+
+        margin-left: 20%;
+
+        li {
+
+            font-size: .85em;
+
+            list-style-type: none;
+
+            i {
+                color: rgb(235, 235, 235);
+                vertical-align: middle;
+                margin-right: .35em;
+            }
+ 
+            
+        }
+    }
+
+
+    a {
+        color: $white-font;
+        text-decoration: none;
+        &:hover,
+        &:active {
+            transition: $transition;
+            color: $hover;
+        }
+    }
+}
+
+
+header {
+    background: $header-background;
+
+    @include flexbox-ac-jc;
+    flex-direction: column;
+
+
+    width: 100%;
+    height: 40vh;
+
+    h1 {
+        font-weight: 400;
+        font-size: 4rem;
+        margin: 0;
+
+        margin-left: 1em;
+        align-self: flex-start;
+    }
+}
+
+nav {
+
+    width: 100vw;
+    background: $nav-color;
+
+    z-index: 30 !important;
+    box-shadow: 0 0 0 .1em $nav-color;
+
+    ul {
+        @include flexbox-ac-jc;
+        justify-content: flex-end;
+
+
+        flex-direction: row;
+        gap: 3em;
+
+        font-size: $normal-font-size;
+
+        list-style-type: none;
+        margin: 0 4rem;
+        margin-right: 20%;
+        padding: .5rem 0;
+    }
+
+    @include a-element-style-with-transition;
+
+    li {
+
+    padding: .4rem;
+    border-radius: .2rem;
+    
+    &:hover,
+    &:active {
+        transition: $transition;
+    }
+
+        a {
+            text-decoration: none;
+            color: $nav-font-color;
+        }
+
+    }
+}
+
+main {
+    background: $main-background;
+    width: 100vw;
+
+    @include flexbox-ac-jc;
+
+    section {
+        width: 100vw;
+        align-self: flex-start;
+        margin-top: 2em;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        article {
+            width: 50vw;
+            min-height: 50vh;
+            background: $article-color;
+
+            h2 {
+                margin: 2em 3em;
+            }
+
+            p {
+                width: 70%;
+                margin-left: 1.5em;
+        
+            }
+
+            box-shadow: .5em 0 2em .05em $article-color;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+
+    img {
+        z-index: -1;
+
+       width: 60%;
+ 
+    }
+}
+
+footer {
+    background: rgb(104, 0, 52);
+    width: 100vw;
+    
+    @include flexbox-ac-jc;
+}
+
