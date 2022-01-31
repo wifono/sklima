@@ -254,6 +254,51 @@ footer {
     @include flexbox-ac-jc;
 }
 
+
+// About us 
+.aboutUs {
+
+    p {
+        text-align: center;
+        line-height: 1.5em;
+    }
+}
+
+// services
+
+.services {
+
+    ul {
+        @include flexbox-ac-jc;
+        gap: 1em;
+
+        margin: 1em 0;
+        padding: 0;
+
+        list-style-type: none;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+.servicesList {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 5em !important;
+
+    span {
+        font-weight: 600;
+    }
+
+}
+
 // CONTACT FORM
 
 .contactForm {
@@ -272,6 +317,25 @@ footer {
 
         input {
             margin: .8em;
+            height: 1.5em;
+            background: aliceblue;
+            border: none;
+            text-align: center;
+
+            &:hover {
+                background: darken(aliceblue, 10%);
+                transition: .3s all ease-in;
+            }
+        }
+
+        textarea {
+            background: aliceblue;
+            border: none;
+            margin: 1em 0;
+        }
+
+        .btn {
+            cursor: pointer;
         }
     }
 }
@@ -280,17 +344,50 @@ footer {
     @include flexbox-ac-jc;
     flex-direction: row;
 
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        font-size: 1.2em;
+        
+
+        @include flexbox-ac-jc;
+        flex-direction: column;
+        gap: 1em;
+
+        @include a-element-style-with-transition;
+        
+        a {
+            color: $white-font;
+        }
+
 }
 
 .contactInfo {
     @include flexbox-ac-jc;
     flex-direction: column;
-
+    align-self: flex-start;
     width: 50%;
+
+    p {
+        margin: 2em 0;
+        padding: 0;
+        font-size: 1.1em;
+        text-align: center;
+        width: 70%;
+    }
     
-    
-    
-    
-    
+    ul {
+        margin-top: 5em;
+    }
+}   
+}
+
+.freonnet {
+
+    p {
+        text-align: center
+    }
 }
 
