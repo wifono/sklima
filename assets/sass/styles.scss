@@ -127,7 +127,7 @@ header {
 
 
     width: 100%;
-    height: 79vh;
+    height: 85vh;
 
     h1 {
         font-weight: 400;
@@ -196,15 +196,20 @@ main {
     @include flexbox-ac-jc;
 
     section {
+        
         width: 100vw;
         align-self: flex-start;
-        margin-left: 2rem;
-        margin-right: 2rem;
+
 
         article {
-            width: 50vw;
+            width: 100vw;
             min-height: 50vh;
             background: $article-color;
+
+
+            &:nth-child(2n) {
+                background: darken($article-color, 20%);
+            }
 
             h2 {
                 margin: 2em 3em;
