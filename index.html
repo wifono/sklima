@@ -7,8 +7,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>S-Klima - Klimatizácie, vzduchotechnika</title>
+
+        <meta name="description" content="S-Klima - Klimatizácie, vzduchotechnika">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="assets\css\styles.css">
@@ -32,6 +34,9 @@
         </div>
 
             <nav>
+
+                <h2>S-Klima</h2>
+
                 <ul>
                     <li><a href="#">Domov</a></li>
                     <li><a href="#">O nás</a></li>
@@ -41,7 +46,7 @@
             </nav>
 
         <header>
-            <h1>Sklima</h1>
+            
         </header>
 
         <main>
@@ -60,6 +65,13 @@
                 <div class="row">
                     <article>
                         <h2>Služby</h2>
+
+                        <ul>
+                            <li>Klimatizácie</li>
+                            <li>Kúrenie</li>
+                            <li>Údržba</li>
+                        </ul>
+
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi maiores voluptates sint quam,
                             eum tenetur voluptatem repellendus ut iste, blanditiis rerum distinctio obcaecati suscipit? 
                             Tenetur nihil iusto natus sapiente facere.</p>
@@ -68,8 +80,54 @@
                 </div>
 
                 <div class="row">
-                    <article>
+                    <article class="contacts">
+
+                        <div class="contactInfo">
                         <h2>Kontakty</h2>
+                        
+                        <ul>
+                            <li>
+                                 <i id="phoneIcon" class="fas fa-mobile-alt"></i> 
+                                 <a href="tel:+421915319467">+421 915 319 467</a> 
+                            </li>
+
+                            <li> 
+                                <i class="far fa-envelope"></i> 
+                                <a href="mailto: info@freonnet.sk"> info@freonnet.sk</a> 
+                            </li>
+
+                            <li>
+                                <a href="https://www.facebook.com/freonnet" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                        
+                        </div>    
+
+                            <div class="contactForm">
+                                <h3>Kontaktujte nás</h3>
+                                <form action="post">
+                                    <label for="name">Meno</label>
+                                    <input type="text" placeholder="Vaše meno" required>
+
+                                    <label for="email">e-mail</label>
+                                    <input type="text" placeholder="e-mail" required>
+
+                                    <label for="number">Telefónne číslo</label>
+                                    <input type="text" value="+421">
+
+                                    <label for="description">Otázka</label>
+                                    <textarea name="problem" id="" cols="50" rows="10" maxlength="350"></textarea>
+
+                                    <input type="button" name="send" value="Odoslať">
+                                </form>
+                            </div>
+                    </article>
+
+                </div>
+
+                <div class="row">
+                    <article>
+                        <h2><span class="freonnet">Freonnet</span></h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi maiores voluptates sint quam,
                             eum tenetur voluptatem repellendus ut iste, blanditiis rerum distinctio obcaecati suscipit? 
                             Tenetur nihil iusto natus sapiente facere.</p>    
@@ -80,8 +138,18 @@
             </section>
         </main>
 
+        <div class="prefooter">
+
+            <h3>Pozri tiež</h3>
+
+            <a href="#">taxikyvsali.sk</a>
+
+        </div>
+
         <footer>
-            <h2>ajm fajn</h2>
+            
+            <p>Daniel Tršťanský, 2022, <span>daniel.trstansky@gmail.com</span></p>
+
         </footer>
 
         

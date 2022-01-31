@@ -1,11 +1,12 @@
 $background-color: rgba(236, 236, 236, 0);
 $preheader-color: rgb(14, 126, 253);
 $header-background: #0000;
-$article-color: rgb(54, 54, 54);
+$article-color: rgb(59, 151, 255);
 $main-background: rgba(201, 201, 201, 0);
 
 $nav-color: #3269d6;
 $nav-font-color: rgb(235, 235, 235);
+$black-font: rgb(24, 24, 24);
 
 $main-font: 'Barlow', sans-serif;
 $white-font: aliceblue;
@@ -129,14 +130,6 @@ header {
     width: 100%;
     height: 85vh;
 
-    h1 {
-        font-weight: 400;
-        font-size: 4rem;
-        margin: 0;
-
-        margin-left: 1em;
-        align-self: flex-start;
-    }
 }
 
 nav {
@@ -153,6 +146,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    h2 {
+        flex: auto;
+        margin-left: 20%;
+        color: $white-font;
+        font-weight: 400;
+        font-size: 2em;
+    }
 
     ul {
         @include flexbox-ac-jc;
@@ -204,42 +205,45 @@ main {
         article {
             width: 100vw;
             min-height: 50vh;
-            background: $article-color;
-
-
-            &:nth-child(2n) {
-                background: darken($article-color, 20%);
-            }
+            @include flexbox-ac-jc();
+            flex-direction: column;
+            justify-content: flex-start;
+            align-self: flex-start;
+            margin-top: 9em;
 
             h2 {
-                margin: 2em 3em;
+                font-size: 2.5em;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $white-font;
+                margin: 0;
             }
 
             p {
-                width: 70%;
-                margin-left: 1.5em;
+                width: 50%;
+                font-size: 1.5em;
+                margin-top: 5em;
         
             }
-
-            box-shadow: .5em 0 2em .05em $article-color;
         }
     }
+
 }
 
 .row {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: $article-color;
+
+    height: 50em;
 
     &:nth-child(2n) {
-        flex-direction: row-reverse;
-    }
-
-    img {
-        z-index: -1;
-
-       width: 60%;
- 
+        background: aliceblue;
+        
+        h2 {
+            color: $black-font;
+        }
     }
 }
 
@@ -248,5 +252,45 @@ footer {
     width: 100vw;
     
     @include flexbox-ac-jc;
+}
+
+// CONTACT FORM
+
+.contactForm {
+    background: lighten($article-color, 5%);
+    box-shadow: 0 0 .1em  darken($article-color, 5%);
+    
+
+    @include flexbox-ac-jc;
+    flex-direction: column;
+
+    form {
+        @include flexbox-ac-jc;
+        flex-direction: column;
+
+        padding: 1.5em;
+
+        input {
+            margin: .8em;
+        }
+    }
+}
+
+.contacts {
+    @include flexbox-ac-jc;
+    flex-direction: row;
+
+}
+
+.contactInfo {
+    @include flexbox-ac-jc;
+    flex-direction: column;
+
+    width: 50%;
+    
+    
+    
+    
+    
 }
 
